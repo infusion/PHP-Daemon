@@ -32,8 +32,6 @@ set_error_handler("Main::handleError");
 
 if (DAEMON_FORK) {
 
-	Main::registerConsole();
-
 	Main::registerEnv();
 
 	/* Reduce verbosity, we don't have STDOUT/STDERR open anymore*/
