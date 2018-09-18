@@ -41,7 +41,7 @@ if (DAEMON_FORK) {
 Main::loop();
 
 /* Delete PID file after shutdown */
-unlink(PID_FILE);
+unlink(DAEMON_PID);
 
 Main::log(E_NOTICE, DAEMON_NAME . ' shut down normally at ' . date(DATE_RFC822));
 
