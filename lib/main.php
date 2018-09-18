@@ -75,7 +75,7 @@ final class Main {
 	/**
 	The signal handler function
 	*/
-	private static function _handleSignal($signo) {
+	public static function _handleSignal($signo) {
 
 		switch ($signo) {
 			/*
@@ -108,9 +108,9 @@ final class Main {
 	*/
 	public static function registerSignal() {
 
-		pcntl_signal(SIGTERM, 'self::_handleSignal');
-		pcntl_signal(SIGHUP,  'self::_handleSignal');
-		pcntl_signal(SIGUSR1, 'self::_handleSignal');
+		pcntl_signal(SIGTERM, 'Main::_handleSignal');
+		pcntl_signal(SIGHUP,  'Main::_handleSignal');
+		pcntl_signal(SIGUSR1, 'Main::_handleSignal');
 	}
 
 	/**
