@@ -14,7 +14,7 @@ define('DB_HOST', 'localhost');
 define('DB_NAME', 'test');
 
 define('DAEMON_NAME', 'daemon');
-define('DAEMON_ROOT', '/www/daemon');
+define('DAEMON_ROOT', '.');
 
 define('DAEMON_UID', 1500);
 define('DAEMON_GID', 1500);
