@@ -20,7 +20,7 @@ define('DAEMON_UID', 1500);
 define('DAEMON_GID', 1500);
 
 define('DAEMON_PID', '/var/run/' . DAEMON_NAME . '.pid');
-define('DAEMON_LOG', ini_get('error_log'));
+define('DAEMON_LOG', ini_get('error_log') ? ini_get('error_log') : "/var/log/" . DAEMON_NAME . '.log');
 
 define('DAEMON_FORK',  empty($argv[1]) || 'cli' != $argv[1]);
 
