@@ -57,7 +57,7 @@ function echos($text, $color="normal") {
 
 	$str = chr(27) . $colors[$color] . $text . chr(27) . "[0m";
 
-	if (false === FORKED) {
+	if (false === DAEMON_FORK) {
 		echo $str;
 		return;
 	}
