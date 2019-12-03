@@ -32,7 +32,7 @@ final class Main {
 
 				$sleep = MAX_SLEEP + $load * (MIN_SLEEP - MAX_SLEEP);
 				
-				setproctitle(NAME . ': ' . round(100 * $load, 1) . '%');
+				cli_set_process_title(DAEMON_NAME . ': ' . round(100 * $load, 1) . '%');
 				echos("Sleep for "); echos($sleep, "magenta"); echos(" seconds\n\n");
 				sleep($sleep);
 				
